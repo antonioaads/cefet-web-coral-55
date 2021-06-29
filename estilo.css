@@ -3,8 +3,35 @@
 @import "fonts/ravie.css";
 @import "fonts/verdana.css";
 
+:root {
+  --color-background: #fff;
+  --color-background-initial: #f6f1b2;
+  --color-background-final: #4599b2;
+  --color-spotlight: #d027aa;
+  --color-border: #d3d3d3;
+  --color-text: #333333;
+
+  --color-cardapio-background: #ffffff33;
+  --color-cardapio-border: #aac0ae;
+
+  --color-cabecalho-title: #e90c0c;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #000;
+    --color-background-initial: #053F5B;
+    --color-background-final: #0F0020;
+    --color-border: #212029;
+    --color-text: #E5EDE8;
+
+    --color-cardapio-background: #00000033;
+    --color-cardapio-border: #1E3C51;
+  }
+}
+
 body {
-  background-color: #fff;
+  background-color: var(--color-background);
   font-family: "verdana", "OpenSans", sans-serif;
 }
 
@@ -13,31 +40,31 @@ h1 {
 }
 
 strong {
-  color: #d027aa;
+  color: var(--color-spotlight);
 }
 
 #recipiente {
-  background-image: linear-gradient(to bottom, #f6f1b2, #4599b2 80%);
-  border-left: 1px solid #d3d3d3;
-  border-right: 1px solid #d3d3d3;
+  background-image: linear-gradient(to bottom, var(--color-background-initial), var(--color-background-final) 80%);
+  border-left: 1px solid var(--color-border);
+  border-right: 1px solid var(--color-border);
 }
 
 #cardapio {
-  background-color: rgba(255, 255, 255, 0.2);
-  border-top: 1px solid #aac0ae;
-  border-bottom: 1px solid #aac0ae;
-  border-left: 1px solid #aac0ae;
+  background-color: var(--color-cardapio-background);
+  border-top: 1px solid var(--color-cardapio-border);
+  border-bottom: 1px solid var(--color-cardapio-border);
+  border-left: 1px solid var(--color-cardapio-border);
 }
 
 #cardapio h3 {
   font-size: 18px;
-  color: #333333;
+  color: var(--color-text);
   margin-top: 30px;
 }
 
 #cardapio article {
   font-size: 14px;
-  color: #333;
+  color: var(--color-text);
 }
 
 
@@ -89,7 +116,7 @@ body {
 #cabecalho-pagina h1 {
   margin: 0;
   font-size: 36px;
-  color: #e90c0c;
+  color: var(--color-cabecalho-title);
   font-weight: normal;
 
   text-align: center;
@@ -98,7 +125,7 @@ body {
 #cabecalho-pagina h2 {
   margin: 0;
   font-size: 24px;
-  color: #333;
+  color: var(--color-text);
   font-weight: normal;
 
   text-align: right;
