@@ -135,9 +135,15 @@ article {
 
 /* EXERCÍCIO 7: o ticket */
 #ticket {
+  position: fixed;
+  top: 50vh;
+  transform: translateY(-50%);
+  left: -89px;
+  transition: left 0.3s ease-out;
 }
 
 #ticket:hover {
+  left: 0px;
 }
 
 
